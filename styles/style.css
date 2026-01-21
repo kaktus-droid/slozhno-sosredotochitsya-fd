@@ -15,40 +15,40 @@
   min-block-size: 668px;
   display: grid;
   grid-template-columns: 1fr 70px;
-  grid-template-rows: 26px 98px 220px 133px;
+  grid-template-rows: 26px 98px 219px 136px;
   color: white;
-  gap: 39px;
+  gap: 37px;
   margin-block-end: 40px;
 }
 
 .decorated-zone {
   padding: 10px;
   position: relative;
-  border: 2px solid transparent;
+  border: 0.1px solid transparent;
 }
 
 .decorated-zone:before {
   content: "";
   display: block;
-  width: 25px;
-  height: 25px;
+  inline-size: 25px;
+  block-size: 25px;
   background-color: transparent;
   position: absolute;
-  border-left: 1px solid var(--accent-color);
-  border-bottom: 1px solid var(--accent-color);
-  bottom: 10px;
+  border-inline-start: 1px solid var(--accent-color);
+  border-block-end: 1px solid var(--accent-color);
+  bottom: 10px; 
   left: 10px;
 }
 
 .decorated-zone:after {
   content: "";
   display: block;
-  width: 25px;
-  height: 25px;
+  inline-size: 25px;
+  block-size: 25px;
   background-color: transparent;
   position: absolute;
-  border-top: 1px solid var(--accent-color);
-  border-right: 1px solid var(--accent-color);
+  border-inline-end: 1px solid var(--accent-color);
+  border-block-start: 1px solid var(--accent-color);
   top: 10px;
   right: 10px;
 }
@@ -56,7 +56,7 @@
 .rec {
   grid-column: 2;
   grid-row: 1;
-  padding-right: 9px;
+  padding-inline-end: 9px;
   justify-items: end;
   display: flex;
   justify-content: end;
@@ -64,15 +64,15 @@
 
 .rec__text {
   text-transform: uppercase;
-  padding-right: 10px;
+  padding-inline-end: 10px;
   color: var(--accent-color);
   line-height: 25px;
   align-self: center;
 }
 
 .rec__form {
-  width: 9px;
-  height: 9px;
+  inline-size: 9px;
+  block-size: 9px;
   border-radius: 50%;
   background-color: var(--accent-color);
   align-self: center;
@@ -81,8 +81,8 @@
 }
 
 .rec__blur {
-  width: 12px;
-  height: 12px;
+  inline-size: 12px;
+  block-size: 12px;
   border-radius: 50%;
   background-color: var(--accent-color);
   align-self: center;
@@ -100,7 +100,7 @@
 .header__theme-menu-list {
   display: grid;
   justify-content: center;
-  gap: 11px;
+  gap: 10px;
 }
 
 .header__theme-menu-item {
@@ -125,9 +125,9 @@
 .header__title {
   grid-column: span 2;
   grid-row: 3;
-  font-weight: 700;
+  font-weight: var(--text-bold);
   color: #DB00FF;
-  font-size: 116px;
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   text-shadow: 4px 4px 0 var(--accent-color);
   line-height: 0.8;
   align-self: end;
@@ -137,10 +137,13 @@
   grid-column: span 2;
   grid-row: 4;
   align-self: end;
-  background-color: var(--accent-color);
-  font-weight: 700;
+  font-weight: var(--text-bold);
   color: var(--main-text-color);
   block-size: fit-content;
+}
+
+.title-decor {
+  background-color: var(--accent-color);
 }
 
 /* секция*/
@@ -159,9 +162,9 @@
 
 .content__list-title{
   color: var(--accent-color);
-  font-weight: 700;
+  font-weight: var(--text-bold);
   line-height: 23.4px;
-  font-size: 18px;
+  font-size: var(--text-size);
 }
 
 .content__list-cards {
@@ -177,7 +180,6 @@
 }
 
 .content__list-cards-item-title {
-  background-color: var(--accent-color);
   color: var(--main-text-color);
 }
 
@@ -189,10 +191,20 @@
 
 .content__list-cards-item-text-accent {
   text-shadow: 2px 2px 0 var(--accent-color);
+  text-decoration: none;
+}
+
+a.content__list-cards-item-text-accent:hover {
+  text-decoration: underline;
+  color: var(--text-color);
+}
+
+a.content__list-cards-item-text-accent:focus-visible {
+  outline: var(--text-color) solid 1px;
 }
 
 .content__list-cards-item-subtitle {
-  font-weight: 400;
+  font-weight: var(--text-regular);
 }
 
 .content-section__list-advices {
@@ -224,9 +236,9 @@
 .footer__title {
   grid-column: 1;
   grid-row: 1;
-  font-weight: 700;
+  font-weight: var(--text-bold);
   color: #DB00FF;
-  font-size: 116px;
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   text-shadow: 4px 4px 0 var(--accent-color);
   line-height: 0.83;
   align-self: center;
@@ -234,9 +246,11 @@
 }
 
 @media (width >= 768px) {
+  
   .decorated-zone {
   padding: 20px 20px 20px 0px;
   }
+
   .decorated-zone:before {
   bottom: 20px;
   left: 20px;
@@ -266,6 +280,7 @@
 .header__title {
   grid-column: span 3;
   justify-self: start;
+  font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
 }
 
 .header__description {
