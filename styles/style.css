@@ -1,5 +1,304 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
 .page {
+  background-image: var(--background-image);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-color: var(--background-color);
   /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
 }
+
+.header {
+  block-size: 100vh;
+  min-block-size: 668px;
+  display: grid;
+  grid-template-columns: 1fr 70px;
+  grid-template-rows: 26px 98px 220px 133px;
+  color: white;
+  gap: 39px;
+  margin-block-end: 40px;
+}
+
+.decorated-zone {
+  padding: 10px;
+  position: relative;
+  border: 2px solid transparent;
+}
+
+.decorated-zone:before {
+  content: "";
+  display: block;
+  width: 25px;
+  height: 25px;
+  background-color: transparent;
+  position: absolute;
+  border-left: 1px solid var(--accent-color);
+  border-bottom: 1px solid var(--accent-color);
+  bottom: 10px;
+  left: 10px;
+}
+
+.decorated-zone:after {
+  content: "";
+  display: block;
+  width: 25px;
+  height: 25px;
+  background-color: transparent;
+  position: absolute;
+  border-top: 1px solid var(--accent-color);
+  border-right: 1px solid var(--accent-color);
+  top: 10px;
+  right: 10px;
+}
+
+.rec {
+  grid-column: 2;
+  grid-row: 1;
+  padding-right: 9px;
+  justify-items: end;
+  display: flex;
+  justify-content: end;
+}
+
+.rec__text {
+  text-transform: uppercase;
+  padding-right: 10px;
+  color: var(--accent-color);
+  line-height: 25px;
+  align-self: center;
+}
+
+.rec__form {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background-color: var(--accent-color);
+  align-self: center;
+  position: relative;
+  z-index: 1;
+}
+
+.rec__blur {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: var(--accent-color);
+  align-self: center;
+  filter: blur(3px);
+  position: absolute;
+  z-index: -1;
+  right: 17px;
+}
+
+.header__theme-menu {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+.header__theme-menu-list {
+  display: grid;
+  justify-content: center;
+  gap: 11px;
+}
+
+.header__theme-menu-item {
+  inline-size: 70px;
+}
+
+.header__theme-menu-button {
+  inline-size: 100%;
+  block-size: 26px;
+  border: none;
+  color: var(--accent-color);
+  line-height: 18px;
+  text-transform: lowercase;
+  background-color: transparent;
+  align-items: center;
+}
+
+.header__theme-menu-button_type_dark {
+  border: 1px solid var(--accent-color);
+}
+
+.header__title {
+  grid-column: span 2;
+  grid-row: 3;
+  font-weight: 700;
+  color: #DB00FF;
+  font-size: 116px;
+  text-shadow: 4px 4px 0 var(--accent-color);
+  line-height: 0.8;
+  align-self: end;
+}
+
+.header__description {
+  grid-column: span 2;
+  grid-row: 4;
+  align-self: end;
+  background-color: var(--accent-color);
+  font-weight: 700;
+  color: var(--main-text-color);
+  block-size: fit-content;
+}
+
+/* секция*/
+
+.content {
+  inline-size: 100%;
+  padding: 0px 10px 50px 10px;
+}
+
+.content__list {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(2, min-content);
+  gap: 20px;
+}
+
+.content__list-title{
+  color: var(--accent-color);
+  font-weight: 700;
+  line-height: 23.4px;
+  font-size: 18px;
+}
+
+.content__list-cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(2, min-content);
+  gap: 20px;
+}
+
+.content__list-cards-item {
+  display: grid;
+  gap: 10px;
+}
+
+.content__list-cards-item-title {
+  background-color: var(--accent-color);
+  color: var(--main-text-color);
+}
+
+.content__list-cards-item-text {
+  color: var(--text-color);
+  line-height: 23.4px;
+  display: inline; 
+}
+
+.content__list-cards-item-text-accent {
+  text-shadow: 2px 2px 0 var(--accent-color);
+}
+
+.content__list-cards-item-subtitle {
+  font-weight: 400;
+}
+
+.content-section__list-advices {
+  display: grid;
+  gap: 20px;
+}
+
+.pictures {
+  margin: 0px 10px 40px 10px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 24px repeat(5, auto);
+  gap: 10px;
+}
+
+.content__list-pictures {
+  inline-size: 100%;
+  block-size: auto;
+}
+
+.footer {
+  block-size: 100vh;
+  min-block-size: 668px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+}
+
+.footer__title {
+  grid-column: 1;
+  grid-row: 1;
+  font-weight: 700;
+  color: #DB00FF;
+  font-size: 116px;
+  text-shadow: 4px 4px 0 var(--accent-color);
+  line-height: 0.83;
+  align-self: center;
+  justify-self: center;
+}
+
+@media (width >= 768px) {
+  .decorated-zone {
+  padding: 20px 20px 20px 0px;
+  }
+  .decorated-zone:before {
+  bottom: 20px;
+  left: 20px;
+}
+
+.decorated-zone:after {
+  top: 20px;
+  right: 20px;
+}
+ .header {
+  min-block-size: 1024px;
+  grid-template-columns: 1fr 294px 70px;
+  grid-template-rows: 26px 98px 126px 133px;
+  row-gap: 146px;
+  column-gap: 0px;
+}
+.rec {
+  grid-column: 3;
+}
+.rec__blur {
+  right: 27px;
+}
+.header__theme-menu {
+  grid-column: 3;
+}
+
+.header__title {
+  grid-column: span 3;
+  justify-self: start;
+}
+
+.header__description {
+  grid-column: 2 / 4;
+  block-size: 117px;
+}
+
+.content-section {
+  inline-size: 100%;
+  padding: 60px 20px 0px 20px;
+}
+
+.content-section__list.why {
+  grid-template-columns: 1fr 472px;
+  grid-template-rows: repeat(2, min-content);
+}
+
+.content-section__list-cards.why {
+  grid-column: 2;
+  display: grid;
+  gap: 10px;
+}
+
+.content-section__list.causes {
+  padding-block-start: 20px;
+  grid-template-columns: 236px 1fr;
+  grid-template-rows: 70px repeat(3, 1fr);
+
+}
+.content-section__list-cards.causes {
+  grid-column: span 2;
+  grid-template-rows: 23px auto;
+}
+}
+
+
