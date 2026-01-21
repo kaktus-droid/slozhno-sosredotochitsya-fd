@@ -119,7 +119,7 @@
 }
 
 .header__theme-menu-button_type_dark {
-  border: 1px solid var(--accent-color);
+  outline: 1px solid var(--accent-color);
 }
 
 .header__title {
@@ -212,7 +212,7 @@ a.content__list-cards-item-text-accent:focus-visible {
   gap: 20px;
 }
 
-.pictures {
+.content__pictures {
   margin: 0px 10px 40px 10px;
   display: grid;
   grid-template-columns: 1fr;
@@ -266,7 +266,9 @@ a.content__list-cards-item-text-accent:focus-visible {
   grid-template-rows: 26px 98px 126px 133px;
   row-gap: 146px;
   column-gap: 0px;
+  margin-block-end: 60px;
 }
+
 .rec {
   grid-column: 3;
 }
@@ -288,32 +290,190 @@ a.content__list-cards-item-text-accent:focus-visible {
   block-size: 117px;
 }
 
-.content-section {
+.content {
   inline-size: 100%;
-  padding: 60px 20px 0px 20px;
+  padding: 0px 20px 80px 20px;
 }
 
-.content-section__list.why {
-  grid-template-columns: 1fr 472px;
-  grid-template-rows: repeat(2, min-content);
-}
-
-.content-section__list-cards.why {
-  grid-column: 2;
-  display: grid;
-  gap: 10px;
-}
-
-.content-section__list.causes {
-  padding-block-start: 20px;
+.content__list.why {
   grid-template-columns: 236px 1fr;
-  grid-template-rows: 70px repeat(3, 1fr);
+  grid-template-rows: repeat(2, min-content);
+  row-gap: 0px;
+}
+
+.content__list.causes {
+  grid-template-columns: 236px 1fr;
+  grid-template-rows: 70px 1fr;
 
 }
-.content-section__list-cards.causes {
+.content__list-cards.causes {
   grid-column: span 2;
-  grid-template-rows: 23px auto;
+  grid-template-rows: 23px fit-content;
+  row-gap: 20px;
+}
+
+.content__list.concentrations {
+  grid-template-columns: 236px 1fr;
+  grid-template-rows: 23px 1fr;
+}
+
+.content__list-cards.concentrations {
+  grid-column: 2;
+}
+
+.content__pictures {
+  margin: 0px 20px 60px 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 23px 192px 230px 1fr;
+  gap: 20px;
+}
+
+h3.pictures {
+  grid-column: span 3;
+  grid-row: 1;
+}
+
+.content__list-pictures {
+  object-fit: cover;
+  block-size: 100%;
+  }
+
+img.zakat {
+  grid-column: 1 / 3;
+  grid-row: 2;
+}
+
+img.icecream {
+  grid-row: 2 / 4;
+  grid-column: 3;
+}
+
+img.tape {
+  grid-row: 3 / 5;
+  grid-column: 1;
+}
+
+img.street {
+  grid-row: 4;
+  grid-column: 2 / 4;
+}
+
+img.books {
+  grid-row: 3;
+  grid-column: 2 / 3;
+}
+
+.footer {
+  min-block-size: 1024px;
+}
+
+.footer.decorated-zone {
+  padding: 20px;
 }
 }
 
+@media (width >= 1024px) {
+  .header {
+  block-size: 100vh;
+  min-block-size: 768px;
+  grid-template-columns: 1fr calc(230px/2) calc(230px/2) 1fr;
+  grid-template-rows: 26px 289px 71px;
+  row-gap: 114px;
+  margin-block-end: 60px;
+}
 
+.decorated-zone {
+  padding: 20px;
+}
+
+.decorated-zone:before {
+  bottom: 20px; 
+  left: 20px;
+}
+
+.decorated-zone:after {
+  top: 20px;
+  right: 20px;
+}
+
+.rec {
+  grid-column: 4;
+  grid-row: 1;
+}
+
+.rec__blur {
+  right: 27px;
+}
+
+.header__theme-menu {
+  grid-column: 2 / 4;
+  grid-row: 1;
+}
+
+.header__theme-menu-list {
+  display: flex;
+}
+
+.header__title {
+  grid-column: span 4;
+  grid-row: 2;
+  font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  align-self: end;
+  margin-inline-start: -20px;
+}
+
+.header__description {
+  grid-column: 3 / 5;
+  grid-row: 3;
+  block-size: fit-content;
+  justify-self: end;
+}
+
+.content {
+  padding: 0px 20px 80px 20px;
+}
+
+.content__list.why {
+  grid-template-columns: 315px 1fr;
+  grid-template-rows: repeat(2, min-content);
+  row-gap: 0px;
+}
+
+.content__list.causes {
+  grid-template-columns: 315px;
+  grid-template-rows: 47px 1fr;
+  gap: 20px;
+}
+
+.content__list-title.causes {
+  inline-size: 100%;
+}
+
+.content__list-cards.causes {
+  grid-template-columns: repeat(3, 1fr);
+  row-gap: 0px;
+}
+
+.content__list-cards-item.causes {
+  grid-template-rows: 23px 1fr;
+}
+
+.content__list.concentrations {
+  grid-template-columns: 315px 1fr;
+}
+
+.content__pictures {
+  grid-template-rows: 23px 260px 315px 1fr;
+  gap: 20px;
+}
+
+.footer {
+   min-block-size: 768px;
+}
+
+.footer__title {
+  font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+}
+
+}
