@@ -16,8 +16,8 @@
   grid-template-rows: 26px 98px 219px 136px;
   gap: 37px;
   margin-block-end: 40px;
-  block-size: 100vh;
-  min-block-size: 668px;
+  height: 100vh;
+  min-height: 668px;
 }
 
 .decorated-zone {
