@@ -19,18 +19,6 @@
 .theme-dark .rec {
   display: flex;
 }
-.theme-dark .header__theme-menu-button_type_dark {
-  outline: 1px solid var(--menu-color);
-}
-.theme-dark .header__theme-menu-button_type_auto {
-  outline: none;
-}
-.theme-dark .header__theme-menu-button:hover {
-  outline: 1px solid var(--menu-color-transparent);
-}
-.theme-dark .header__theme-menu-button_type_dark:hover {
-  outline: 1px solid var(--menu-color);
-}
 
 /* сохраните этот селектор в приведённом виде.
     Так стили написанные ниже будут иметь больший вес,
