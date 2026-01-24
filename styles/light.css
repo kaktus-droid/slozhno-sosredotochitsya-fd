@@ -5,7 +5,7 @@
 */
 
 :root.theme-light {
-  --background-image: url(/images/cover-image-light.png);
+  --background-image: url(../images/cover-image-light.png);
   --background-color: #fef1f8;
   --accent-color: #ff8dcb;
   --text-color: #353430;
@@ -18,13 +18,10 @@
 .theme-light .rec {
   display: none;
 }
-.theme-light .content__list-title {
-  color: var(--menu-color);
-}
 
 @media (prefers-color-scheme: light) {
   :root {
-    --background-image: url(/images/cover-image-light.png);
+    --background-image: url(../images/cover-image-light.png);
     --background-color: #fef1f8;
     --accent-color: #ff8dcb;
     --text-color: #353430;

@@ -257,7 +257,7 @@ a.content__list-cards-item-text-accent:focus-visible {
 .content__pictures {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 24px repeat(5, auto);
+  grid-template-rows: repeat(6, auto);
   gap: 10px;
   margin: 0px 10px 40px 10px;
 }
@@ -282,7 +282,7 @@ a.content__list-cards-item-text-accent:focus-visible {
   font-weight: var(--text-bold);
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   line-height: 0.83;
-  text-shadow: 4px 4px 0 #ff0070;
+  text-shadow: 2px 2px 0 var(--accent-color);
 }
 
 @media (width >= 768px) {
@@ -309,11 +309,6 @@ a.content__list-cards-item-text-accent:focus-visible {
     top: 19px;
     right: 28px;
   }
-  .rec__blur {
-    right: -2px;
-  }
-  .header__theme-menu {
-  }
 
   .header__title {
     justify-self: start;
@@ -337,17 +332,18 @@ a.content__list-cards-item-text-accent:focus-visible {
 
   .content__list.causes {
     grid-template-columns: 236px 1fr;
-    grid-template-rows: 70px 1fr;
+    grid-template-rows: repeat(2, min-content);
   }
   .content__list-cards.causes {
-    grid-template-rows: 23px fit-content;
+    grid-template-rows: repeat(2, min-content);
     grid-column: span 2;
     row-gap: 20px;
   }
 
   .content__list.concentrations {
     grid-template-columns: 236px 1fr;
-    grid-template-rows: 23px 1fr;
+    grid-template-rows: 1fr;
+    align-items: start;
   }
 
   .content__list-cards.concentrations {
@@ -357,12 +353,12 @@ a.content__list-cards-item-text-accent:focus-visible {
   .content__pictures {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 23px 192px 230px 1fr;
+    grid-template-rows: repeat(4, min-content);
     gap: 20px;
     margin: 0px 20px 60px 20px;
   }
 
-  h3.pictures {
+  h2.pictures {
     grid-column: span 3;
     grid-row: 1;
   }
@@ -416,20 +412,6 @@ a.content__list-cards-item-text-accent:focus-visible {
     padding: 20px;
   }
 
-  .decorated-zone:before {
-    bottom: 20px;
-    left: 20px;
-  }
-
-  .decorated-zone:after {
-    top: 20px;
-    right: 20px;
-  }
-
-  .rec__blur {
-    right: -2px;
-  }
-
   .header__theme-menu {
     justify-self: center;
     align-self: start;
@@ -441,7 +423,6 @@ a.content__list-cards-item-text-accent:focus-visible {
 
   .header__title {
     margin-inline-start: -20px;
-    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
 
   .header__description {
@@ -454,13 +435,10 @@ a.content__list-cards-item-text-accent:focus-visible {
 
   .content__list.why {
     grid-template-columns: 315px 1fr;
-    grid-template-rows: repeat(2, min-content);
-    row-gap: 0px;
   }
 
   .content__list.causes {
     grid-template-columns: 315px 1fr;
-    grid-template-rows: 47px 1fr;
     gap: 20px;
   }
 
@@ -474,7 +452,7 @@ a.content__list-cards-item-text-accent:focus-visible {
   }
 
   .content__list-cards-item.causes {
-    grid-template-rows: 23px 1fr;
+    grid-template-rows: repeat(2, min-content);
   }
 
   .content__list.concentrations {
@@ -482,7 +460,7 @@ a.content__list-cards-item-text-accent:focus-visible {
   }
 
   .content__pictures {
-    grid-template-rows: 23px 260px 315px 1fr;
+    grid-template-rows: repeat(4, min-content);
     gap: 20px;
   }
 
@@ -491,6 +469,7 @@ a.content__list-cards-item-text-accent:focus-visible {
   }
 
   .footer__title {
+    text-shadow: 2px 2px 0 #ff0070;
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
 }
