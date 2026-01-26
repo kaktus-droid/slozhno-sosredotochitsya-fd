@@ -115,54 +115,31 @@
   block-size: 26px;
 }
 
-.header__theme-menu-button:hover {
-  outline: 1px solid var(--menu-color-transparent);
+.header__theme-menu-button_type_auto:hover {
+  outline: 1px solid var(--hover-auto-theme);
 }
 
-.theme-auto .header__theme-menu-button_type_auto {
-  outline: 1px solid var(--menu-color);
+.header__theme-menu-button_type_light:hover {
+  outline: 1px solid var(--hover-light-theme);
 }
 
-.theme-dark .header__theme-menu-button_type_dark {
-  outline: 1px solid var(--menu-color);
+.header__theme-menu-button_type_dark:hover {
+  outline: 1px solid var(--hover-dark-theme);
 }
 
-.theme-light .header__theme-menu-button_type_light {
-  outline: 1px solid var(--menu-color);
+.header__theme-menu-button_type_dark {
+  outline: 1px solid var(--switch-dark-theme);
 }
 
-.theme-auto .header__theme-menu-button_type_dark:focus-visible {
-  margin-top: 1px;
-  border-block-end: 1px solid var(--menu-color);
-  outline: none;
+.header__theme-menu-button_type_auto {
+  outline: 1px solid var(--switch-auto-theme);
 }
 
-.theme-auto .header__theme-menu-button_type_light:focus-visible {
-  margin-top: 1px;
-  border-block-end: 1px solid var(--menu-color);
-  outline: none;
+.header__theme-menu-button_type_light {
+  outline: 1px solid var(--switch-light-theme);
 }
 
-.theme-dark .header__theme-menu-button_type_light:focus-visible {
-  margin-top: 1px;
-  border-block-end: 1px solid var(--menu-color);
-  outline: none;
-}
-
-.theme-dark .header__theme-menu-button_type_auto:focus-visible {
-  margin-top: 1px;
-  border-block-end: 1px solid var(--menu-color);
-  outline: none;
-}
-
-.theme-light .header__theme-menu-button_type_auto:focus-visible {
-  margin-top: 1px;
-  border-block-end: 1px solid var(--menu-color);
-  outline: none;
-}
-
-.theme-light .header__theme-menu-button_type_dark:focus-visible {
-  margin-top: 1px;
+.header__theme-menu-button:focus-visible {
   border-block-end: 1px solid var(--menu-color);
   outline: none;
 }
@@ -342,12 +319,7 @@ a.content__list-cards-item-text-accent:focus-visible {
 
   .content__list.concentrations {
     grid-template-columns: 236px 1fr;
-    grid-template-rows: 1fr;
     align-items: start;
-  }
-
-  .content__list-cards.concentrations {
-    grid-column: 2;
   }
 
   .content__pictures {
@@ -433,6 +405,10 @@ a.content__list-cards-item-text-accent:focus-visible {
     padding: 0px 20px 80px 20px;
   }
 
+  .content__list {
+    grid-template-rows: 1fr;
+}
+
   .content__list.why {
     grid-template-columns: 315px 1fr;
   }
@@ -469,7 +445,7 @@ a.content__list-cards-item-text-accent:focus-visible {
   }
 
   .footer__title {
-    text-shadow: 2px 2px 0 #ff0070;
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+    text-shadow: 2px 2px 0 #ff0070;
   }
 }

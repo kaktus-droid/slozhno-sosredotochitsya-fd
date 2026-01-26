@@ -13,7 +13,12 @@
   --decor-color: #353430;
   --menu-color: #353430;
   --title-color: #ffc2e6;
-  --menu-color-transparent: rgba(53, 52, 48, 0.4);
+  --switch-dark-theme: transparent;
+  --switch-light-theme: #353430;
+  --switch-auto-theme: transparent;
+  --hover-dark-theme: rgba(53, 52, 48, 0.4);
+  --hover-light-theme: #353430;
+  --hover-auto-theme: rgba(53, 52, 48, 0.4);
 }
 .theme-light .rec {
   display: none;
@@ -29,7 +34,12 @@
     --decor-color: #353430;
     --menu-color: #353430;
     --title-color: #ffc2e6;
-    --menu-color-transparent: rgba(53, 52, 48, 0.4);
+    --switch-dark-theme: transparent;
+    --switch-light-theme: transparent;
+    --switch-auto-theme: #353430;
+    --hover-dark-theme: rgba(53, 52, 48, 0.4);
+    --hover-light-theme: rgba(53, 52, 48, 0.4);
+    --hover-auto-theme: #353430;
   }
 
   .rec {

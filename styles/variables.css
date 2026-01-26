@@ -6,8 +6,13 @@
   --main-text-color: #000028;
   --decor-color: #ff0070;
   --menu-color: #ff0070;
-  --menu-color-transparent: rgba(255, 0, 112, 0.4);
   --title-color: #db00ff;
+  --switch-dark-theme: #ff0070;
+  --switch-light-theme: transparent;
+  --switch-auto-theme: transparent;
+  --hover-dark-theme: #ff0070;
+  --hover-light-theme: rgba(255, 0, 112, 0.4);
+  --hover-auto-theme: rgba(255, 0, 112, 0.4)0;
   --text-size: 18px;
   --text-bold: 700;
   --text-regular: 400;
